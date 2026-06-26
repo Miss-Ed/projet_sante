@@ -1,2 +1,2 @@
 # projet_sante
-Mon Projet Python
+Projet Python de gestion hospitalière
