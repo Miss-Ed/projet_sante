@@ -4,6 +4,26 @@ print('===================================================')
 print('(Tapez "q" a tout moment pour annuler le calcul en cours)')
 
 
+def addition(a, b):
+    return a + b
+
+
+def soustraction(a, b):
+    return a - b
+
+
+def multiplication(a, b):
+    return a * b
+
+
+def division(a, b):
+    if b != 0:
+        return a / b
+    else:
+        print('Erreur : division par zero impossible')
+        return a  # on garde le resultat inchange en cas d'erreur
+
+
 def demander_nombre(message):
     while True:
         saisie = input(message)
@@ -47,16 +67,13 @@ while nouveau_calcul:
             break
 
         if operateur == '+':
-            resultat = resultat + nombre
+            resultat = addition(resultat, nombre)
         elif operateur == '-':
-            resultat = resultat - nombre
+            resultat = soustraction(resultat, nombre)
         elif operateur == '*':
-            resultat = resultat * nombre
+            resultat = multiplication(resultat, nombre)
         elif operateur == '/':
-            if nombre != 0:
-                resultat = resultat / nombre
-            else:
-                print('Erreur : division par zero impossible')
+            resultat = division(resultat, nombre)
 
         print('Resultat :', resultat)
 
